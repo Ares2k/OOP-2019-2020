@@ -14,5 +14,12 @@ public class Main
 
         Cat topcat = new Cat();
         topcat.speak();
+
+        System.out.println("ggg");
+
+        while(topcat.getNumLives() > 0) {
+            topcat.kill();
+        }
+        topcat.kill();
     }
 }
