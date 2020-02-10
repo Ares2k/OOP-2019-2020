@@ -22,6 +22,7 @@ class BugZap extends PApplet {
     private float laserX2 = 0;
     private float laserY2 = 0;
 
+
     public void settings() {
         size(700, 700);
     }
@@ -33,7 +34,7 @@ class BugZap extends PApplet {
     public void draw() {
         background(0, 0, 0);
         drawPlayer(playerX1, playerY1, playerX2, playerY2, playerX3, playerY3, playerWidth);
-        drawLaser(laserX1, laserY1, laserX2, laserY2);
+        //drawLaser(laserX1, laserY1, laserX2, laserY2);
     }
 
     public void drawPlayer(float x1, float y1, float x2, float y2, float x3, float y3, float w) {
@@ -81,14 +82,22 @@ class BugZap extends PApplet {
         {
             System.out.println("SPACE key pressed");
 
-            laserX1 = playerX1 + 10;
-            laserX2 = laserX1;
+            drawLaser(playerX1+10, playerY1, laserX1, laserY1-700);
+            // laserX1 = playerX1 + 10;
+            // laserX2 = laserX1;
 
-            laserY1 = playerY1;
-            laserY2 = laserY1 - 700;
+            // laserY1 = playerY1;
+            // laserY2 = laserY1 - 700;
 
-        }
+        // } else {
+        //     laserX1 = 0;
+        //     laserX2 = 0;
+
+        //     laserY1 = 0;
+        //     laserY2 = 0;
+        // }
     }
+}
 
     public void drawLaser(float x1, float y1, float x2, float y2) {
 
