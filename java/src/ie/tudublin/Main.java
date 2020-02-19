@@ -26,6 +26,12 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new AirSeaBattle());
     }
+
+    public void arrays()
+    {
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Arrays());
+    }
     
     public void dogsCats()
     {
@@ -69,6 +75,6 @@ public class Main
     public static void main(String[] arg)
     {
         Main main = new Main();
-		main.loops();        
+		main.arrays();        
     }
 }
