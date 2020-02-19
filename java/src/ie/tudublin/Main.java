@@ -3,6 +3,12 @@ package ie.tudublin;
 public class Main
 {
 
+    public void helloArrays()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new ArraysExample());
+    }
+
     public void helloProcessing()
 	{
 		String[] a = {"MAIN"};
@@ -75,6 +81,10 @@ public class Main
     public static void main(String[] arg)
     {
         Main main = new Main();
+<<<<<<< HEAD
 		main.arrays();        
+=======
+		main.helloArrays();        
+>>>>>>> 3abc8db5bc26035d1738ad470a5d37a4dc04ebf7
     }
 }
