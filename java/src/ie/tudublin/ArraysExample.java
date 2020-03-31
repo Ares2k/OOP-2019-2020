@@ -87,8 +87,22 @@ public class ArraysExample extends PApplet
 	public void draw()
 	{	
 		background(0);		
-		colorMode(HSB);	
+		//colorMode(HSB);	
 
-		drawBarChart();
+		drawGraph();
+		//drawBarChart();
+		
+	}
+
+	public void drawGraph() {
+
+		stroke(255, 255, 255);
+		line(40, 20, 40, 450);
+		line(36, 440, 470, 440);
+
+		for(int i=0; i<rainFall.length; i++) {
+
+			line(35, i, 40, i);
+		}
 	}
 }
