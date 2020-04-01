@@ -23,8 +23,10 @@ public class Loops extends PApplet {
 		// drawCircle();
 		// rainbow();
 		// rainbowCircle();
-		drawGrid();
-		//5drawPyramid();
+		//drawGrid();
+		//drawPyramid();
+		//fade();
+		checkerBoard();
 	}
 
 	public void drawPattern() {
@@ -98,14 +100,50 @@ public class Loops extends PApplet {
 
 	public void drawPyramid() {
 
-		int x = 20;
-		int y = 20;
+		int ypos = 20;
+		int length = 460;
+		int width = 50;
+		int j=0;
 
-		while(x != 480) {
+		for(int i=20; j<5; i+=40) {
 
-			line(x, 40, x+40, y+40);
-			x+=40;
-			y+=40;
+			rect(i, ypos, length, width);
+			ypos += width;
+			length -= 80;
+			j++;
 		}
+	}
+
+	public void fade() {
+
+		int colorSelection = 0;
+		int ypos = 25;
+		int count = 0;
+
+		for(int i=25; count<10; i+=50) {
+			
+			colorSelection = 0;
+
+			for (int j = 25; j < 500; j += 50) {
+				
+				colorSelection(colorSelection++);
+				circle(j, ypos, 50);
+			}
+			ypos += 50;
+			count++;
+		}
+	}
+
+	public void checkerBoard() {
+
+		for(int j=0; j<500; j+=25) {
+
+			for(int i=0; i<500; i+=25) {
+				
+				fill(0, 0, 102);
+				square(i, j, 25);
+			}
+		}
+
 	}
 }
